@@ -1,0 +1,42 @@
+/**FeedStore:
+SHP (290);
+DDG (335);
+CGFP (300);
+BPP (320);
+CORN (334);
+CSM (400);
+ALLPURPMIN(32);
+BREEDERMIN(36);
+PROTEINTUB(100);
+MINERALTUB (145);
+SALTBLOCK(10);
+6TFEEDER (8000);
+MINERALFEEDER (180);
+GROWMAXBLEND (365);
+**/
+
+CREATE TABLE FeedStore (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, ton_or_indv TEXT, location TEXT, kind TEXT, bulk_discount TEXT, inventory INTEGER);
+
+INSERT INTO FeedStore VALUES (1, "SHP", 290, "ton", "barn", "straight", "yes", 600);
+INSERT INTO FeedStore VALUES (2, "DDG", 335, "ton", "barn", "straight", "yes", 550);
+INSERT INTO FeedStore VALUES (3, "CGFP", 300, "ton", "barn", "straight", "yes", 890);
+INSERT INTO FeedStore VALUES (4, "BPP", 320, "ton", "barn", "straight", "yes", 300);
+INSERT INTO FeedStore VALUES (5, "CORN", 334, "ton", "barn", "straight", "yes", 1000);
+INSERT INTO FeedStore VALUES (6, "CSM", 400, "ton", "barn", "straight", "yes", 425);
+INSERT INTO FeedStore VALUES (7, "ALLPURMIN", 32, "indv", "whse", "bag", "no", 40);
+INSERT INTO FeedStore VALUES (8, "BREEDERMIN", 36, "indv", "whse", "bag", "no", 35);
+INSERT INTO FeedStore VALUES (9, "PROTEINTUB", 100, "indv", "whse", "tub", "no", 32);
+INSERT INTO FeedStore VALUES (10, "MINERALTUB", 145, "indv", "whse", "tub", "no", 16);
+INSERT INTO FeedStore VALUES (11, "SALTBLOCK", 10, "indv", "whse", "block", "no", 5);
+INSERT INTO FeedStore VALUES (12, "6TFEEDER", 8000, "indv", "outside", "feeder", "no", 1);
+INSERT INTO FeedStore VALUES (13, "MINERALFEEDER", 180, "indv", "outside", "feeder", "no", 3);
+INSERT INTO FeedStore VALUES (14, "GROWMAXBLEND", 365, "bulk", "OHbin", "blend", "yes", 5000);
+
+
+SELECT * FROM FeedStore ORDER BY price;
+
+SELECT SUM(inventory) FROM FeedStore;
+
+
+
+
